@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyResolve AI – Smart Conflict Detection & Resolution for ATC</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Optional: Leaflet.Polyline.SnakeAnim for animation -->
+    <script src="https://unpkg.com/leaflet-polylinesnakeanim@0.0.7/leaflet.polyline.snakeanim.min.js"></script>
+    <!-- leaflet.motion for smooth animations -->
+    <script src="https://cdn.skypack.dev/leaflet.motion"></script>
+    <!-- leaflet.animatedmarker for moving airplane icons -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.animatedmarker@1.0.0/leaflet.animatedmarker.min.js"></script>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flight Lookup</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+
+
+    <!-- Hero Section with Cloudy Video Background -->
+    <header class="hero-section video-hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-clouds-moving-in-the-sky-1345-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+        <div class="container hero-content">
+            <h1>SkyResolve AI</h1>
+            <p>AI-Powered Conflict Detection & Resolution for Air Traffic Control</p>
+            <a href="#features" class="btn">Explore Features</a>
+        </div>
+    </header>
+
+<section id="system-architecture" class="dark-section animate__animated animate__fadeInUp">
+  <div class="container">
+    <h2>System Architecture & OS-Level Intelligence</h2>
+    <p class="section-intro">SkyResolve leverages a powerful operating system foundation to ensure real-time responsiveness, fault-tolerance, and intelligent decision-making under high-pressure ATC environments.</p>
+    
+    <div class="os-features">
+      <div class="os-feature-box">
+        <h3>⚙️ Real-Time OS (RTOS)</h3>
+        <p>Ensures low-latency flight conflict detection and real-time alerts with deterministic response cycles.</p>
+      </div>
+
+      <div class="os-feature-box">
+        <h3>🧠 Multithreaded AI Execution</h3>
+        <p>Processes multiple aircraft flight paths simultaneously using OS-managed parallel threads.</p>
+      </div>
+
+      <div class="os-feature-box">
+        <h3>🔒 Kernel-Level Security</h3>
+        <p>Secure modules prevent system breaches or data spoofing in critical air traffic operations.</p>
+      </div>
+
+      <div class="os-feature-box">
+        <h3>🔁 Fault Tolerance & Auto Recovery</h3>
+        <p>Handles system or hardware failures with auto-recovery and watchdog mechanisms.</p>
+      </div>
+
+      <div class="os-feature-box">
+        <h3>📡 Low-Latency Hardware I/O</h3>
+        <p>Seamless communication with ADS-B, radar systems, and sensors for up-to-the-second accuracy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="light animate__animated animate__fadeIn">
+        <div class="container">
+            <h2>About SkyResolve</h2>
+            <p>SkyResolve is an intelligent AI-driven platform designed to help air traffic controllers predict and resolve in-flight conflicts in real time. It enhances situational awareness and decision-making, reducing risks and improving flight efficiency.</p>
+        </div>
+    </section>
+    
+    <div class="divider"></div>
+
+    <!-- Features Section -->
+    <section id="features" class="animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Key Features</h2>
+            <ul class="features-grid">
+                <li>
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M21 16v-2l-8-5V4a1 1 0 00-2 0v5l-8 5v2l8-2.5V20h2v-6.5l8 2.5z"/>
+  </svg>
+  <strong>Real-time Conflict Detection</strong><br>
+  Uses AI models to predict aircraft trajectory and detect conflicts up to 20 minutes ahead.
+</li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M21 16v-2l-8-5V4a1 1 0 00-2 0v5l-8 5v2l8-2.5V20h2v-6.5l8 2.5z"/>
+  </svg>
+  <strong>Real-time Conflict Detection</strong><br>Resolution Recommendations</strong><br>Suggests safe and efficient maneuvers to prevent potential airspace conflicts.</li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M21 16v-2l-8-5V4a1 1 0 00-2 0v5l-8 5v2l8-2.5V20h2v-6.5l8 2.5z"/>
+  </svg>
+  <strong>Real-time Conflict Detection</strong><br>Seamless Integration</strong><br>Integrates with existing ATC radar and data feeds via API.</li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M21 16v-2l-8-5V4a1 1 0 00-2 0v5l-8 5v2l8-2.5V20h2v-6.5l8 2.5z"/>
+  </svg>
+  <strong>Real-time Conflict Detection</strong><br>Explainable AI</strong><br>Provides human-readable explanations of conflict alerts and resolution logic.</li>
+            </ul>
+
+        </div>
+    </section>
+
+<section id="flight-info">
+  <h2>Live Flight Info</h2>
+  <a href="features.html" class="styled-button"><h3>🚀 Fligths Route</h3></a>
+</section>
+
+
+<section id="weather-report">
+  <h2>🌦 Live Weather Map</h2>
+  <iframe
+    width="100%"
+    height="500"
+    style="border-radius: 12px; border: 3px solid #38bdf8; box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);"
+    src="https://embed.windy.com/embed2.html?lat=28.6&lon=77.2&detailLat=28.6&detailLon=77.2&width=650&height=450&zoom=5&level=surface&overlay=rain&menu=true&message=true&marker=true&calendar=now&pressure=true&type=map&location=coordinates&detail=true&metricWind=default&metricTemp=default&radarRange=-1"
+    frameborder="0"
+  ></iframe>
+</section>
+
+
+<!-- Clickable Radar Link -->
+<a href="C:\Users\Dell\Documents\atc_projeact_pbl\templates.html" style="text-decoration: none;">
+  <div class="radar-container" style="cursor: pointer;">
+    <div class="radar">
+      <div class="sweep"></div>
+      <div class="blip" style="top: 30%; left: 60%;"></div>
+      <div class="blip" style="top: 55%; left: 40%;"></div>
+      <!-- Add more blips for simulated aircraft -->
+    </div>
+  </div>
+</a>
+<script>
+  !(function(d,s,id){
+    var js,fjs = d.getElementsByTagName(s)[0];
+    if(!d.getElementById(id)){
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://weatherwidget.io/js/widget.min.js';
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  })(document,'script','weatherwidget-io-js');
+</script>
+
+    <div class="divider"></div>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="light animate__animated animate__zoomIn">
+        <div class="container">
+            <h2>How It Works</h2>
+            <ol>
+                <li><strong>Data Ingestion:</strong> Live flight data is ingested from ATC radar systems and ADS-B feeds.</li>
+                <li><strong>Prediction Engine:</strong> AI models simulate future flight paths using current aircraft telemetry.</li>
+                <li><strong>Conflict Detection:</strong> The system flags potential trajectory conflicts and estimates time to loss of separation.</li>
+                <li><strong>Automated Resolution:</strong> Offers suggested heading/speed/altitude changes or reroutes.</li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+  
+    <div class="divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="light animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 SkyResolve AI. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- OpenWeatherMap + Leaflet Integration -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+
+    
+</body>
+</html> 
